@@ -25,17 +25,12 @@
 <style>
 h1{font-size:70px;
      height:50px;
-   margin-left: 2%;
+  text-align:center;
     font-family:Agency FB;
 
 }
 
-h2{font-size:50px;
-   margin-left: 2%;
-   padding-bottom: 10px;
-    font-family:Agency FB;
 
-}
 
 }
 
@@ -44,17 +39,18 @@ h2{font-size:50px;
 
 </script>
 <head>
-    <div class="row">
-        <h1 align="left">  XYZ Automation </h1>
+    <div class="row" id="container">
+        <h1 text-align="center">  XYZ Automation </h1>
 
 
   </div>
 <p> </p>
+<!--
    <div class="navbar navbar-default navbar-static-top" >
         <div>
                 <ul class="nav navbar-nav navbar-left" style="font-family:Agency FB">
                   <!-- class="active" -->
-                   <li><a href="#">Lights</a></li>
+    <!--               <li><a href="#">Lights</a></li>
                     <li><a href="#">Temperature</a></li>
                     <li><a href="#">Security</a></li>
 					          <li><a href="#">Power Management</a></li>
@@ -64,14 +60,94 @@ h2{font-size:50px;
             </div>
         </div>
     </div>
+-->
+<style>
+#container {
+    text-align: center;
+}
+a, figure {
+    display: inline-block;
+}
+figcaption {
+    margin: 10px 0 0 0;
+    font-variant: small-caps;
+    font-family: Arial;
+    font-weight: bold;
+    color: #bb3333;
 
+}
+figure {
+    padding: 5px;
+        border: 2px solid #000;
+
+
+}
+img:hover {
+    transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+img {
+    transition: transform 0.2s;
+    -webkit-transition: -webkit-transform 0.2s;
+    -moz-transition: -moz-transform 0.2s;
+    -o-transition: -o-transform 0.2s;
+}
+
+</style>
+<div id="container">
+    <a>
+        <figure>
+            <img src="http://lorempixel.com/100/100/nature/1/" width="100px" height="100px" />
+            <figcaption>Lights</figcaption>
+        </figure>
+    </a>
+    <a >
+        <figure>
+             <img src="http://lorempixel.com/100/100/nature/2/" width="100px" height="100px" />
+            <figcaption>Temperature</figcaption>
+        </figure>
+    </a>
+    <a>
+        <figure>
+            <img src="http://lorempixel.com/100/100/nature/1/" width="100px" height="100px" />
+            <figcaption>Security</figcaption>
+        </figure>
+    </a>
+    <a>
+        <figure>
+            <img src="http://lorempixel.com/100/100/nature/1/" width="100px" height="100px" />
+            <figcaption>Power Usage</figcaption>
+        </figure>
+    </a>
+    <a>
+        <figure>
+            <img src="http://lorempixel.com/100/100/nature/1/" width="100px" height="100px" />
+            <figcaption>Appliances</figcaption>
+        </figure>
+    </a>
+    <a>
+        <figure>
+            <img src="http://lorempixel.com/100/100/nature/1/" width="100px" height="100px" />
+            <figcaption>Settings</figcaption>
+        </figure>
+    </a>
+</div>
 
 </head>
+<style>
+  #mapster_wrap_0 {
+    margin: 0 auto;
+}
+</style>
 <body>
 
-<div id="MapWrapper">
 
-    <img class="mapster-wrapper" id="#Image1" src="http://www.image-maps.com/m/private/0/dmgl5vs8ub4tdt9iab70romlu4_floorplan.png" border="0" width:"40%" height:"auto" usemap="#image-maps-2016-05-15-231359" />
+<div id="MapWrapper"  style="text-align:center">
+
+    <img class="mapster-wrapper" id="#Image1" src="http://www.image-maps.com/m/private/0/dmgl5vs8ub4tdt9iab70romlu4_floorplan.png" border="0" usemap="#image-maps-2016-05-15-231359"  align="middle"/>
 <map name="image-maps-2016-05-15-231359" id="ImageMapsCom-image-maps-2016-05-15-231359">
 <area room="Bathroom" href="#" alt="Bathroom" title="Bathroom"  shape="rect" coords="325,15,589,150"   />
 <area shape="rect" href="#" coords="776,544,778,546" alt="Image Map"  />
