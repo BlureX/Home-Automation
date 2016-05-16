@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html>
 <title>Main Menu</title>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
  <script src="jquery.imagemapster.min.js"></script>
  <script src="jquery.imagemapster.js"></script>
-
-
-
 <script src="ResizeImageMap.js"></script>
 <style>
 #topnavbar {
@@ -20,15 +18,26 @@
     width: 100%;
 }
 
-.scale
-{
-    height: 1em;
-    width: 1em;
-    vertical-align: bottom;
+</style>
+<style>
+h1{font-size:70px;
+     height:50px;
+   margin-left: 2%;
+    font-family:Agency FB;
+
+}
+
+h2{font-size:70px;
+     height:50px;
+   margin-left: 2%;
+   padding-bottom: 10px;
+    font-family:Agency FB;
+
+}
+
 }
 
 </style>
-
 <script>
 $('#topnavbar').affix({
     offset: {
@@ -37,10 +46,8 @@ $('#topnavbar').affix({
 });
 </script>
 <head>
-  <div class="container" id="banner">
     <div class="row">
-        <div align="left">
-        <h1><span style="font-family:Agency FB">  XYZ Automation <span style="float:right" >Amy Brown </span></span></h1>
+        <h1 align="left">  XYZ Automation </h1>
 
         </div>
 
@@ -49,23 +56,31 @@ $('#topnavbar').affix({
 
    <div class="navbar navbar-default navbar-static-top" role="navigation" id="topnavbar">
         <div class="container">
-                <ul class="nav navbar-nav" style="font-family:Agency FB">
-                    <li><a href="#">  Lights</a></li>
-                    <li class="active">  <a href="#">Temperature</a></li>
-                    <li><a href="#">  Security</a></li>
-					          <li><a href="#"> Power Management</a></li>
-					          <li><a href="#"> Appliances</a></li>
+                <ul class="nav navbar-nav navbar-left" style="font-family:Agency FB">
+                  <!-- class="active" -->
+                   <li><a href="#">Lights</a></li>
+                    <li><a href="#">Temperature</a></li>
+                    <li><a href="#">Security</a></li>
+					          <li><a href="#">Power Management</a></li>
+					          <li><a href="#">Appliances</a></li>
+                    <li><a href="#">Settings</a></li>
                 </ul>
             </div>
         </div>
     </div>
 
+
 </head>
 <body>
+  <style>
+  .mapster-wrapper {
+      style="margin: 0 auto; align: center; vertical-align: middle;"
+  }
 
-  <div class="floorplan">
+  </style>
+<div id="MapWrapper">
 
-    <img id="#Image1" src="http://www.image-maps.com/m/private/0/dmgl5vs8ub4tdt9iab70romlu4_floorplan.png" border="0" width="778" height="546" orgWidth="778" orgHeight="546" usemap="#image-maps-2016-05-15-231359" alt="" />
+    <img class="mapster-wrapper" id="#Image1" src="http://www.image-maps.com/m/private/0/dmgl5vs8ub4tdt9iab70romlu4_floorplan.png" border="0" width:"40%" height:"auto" usemap="#image-maps-2016-05-15-231359" />
 <map name="image-maps-2016-05-15-231359" id="ImageMapsCom-image-maps-2016-05-15-231359">
 <area room="Bathroom" href="#" alt="Bathroom" title="Bathroom"  shape="rect" coords="325,15,589,150"   />
 <area shape="rect" href="#" coords="776,544,778,546" alt="Image Map"  />
@@ -76,13 +91,6 @@ $('#topnavbar').affix({
 </map>
 
   </div>
-
-   <script type="text/javascript" src="http://davidjbradshaw.com/imagemap-resizer/js/imageMapResizer.min.js"></script>
-   <script type="text/javascript">
-
-   $('map').imageMapResize();
-
- </script>
 
 </body>
 

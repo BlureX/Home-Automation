@@ -11,7 +11,8 @@ var resizeDelay = 100;    // time to wait before checking the window size again
         $('img').mapster({
           fillColor: 'ff0000',
         fillOpacity: 0.3,
-        isSelectable: false
+        isSelectable: false,
+        scaleMap: false
         });
 
     }
