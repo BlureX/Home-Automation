@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<title>Main Menu</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+ <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+  <script src="jquery.imagemapster.min.js"></script>
+  <script src="jquery.imagemapster.js"></script>
+
+<!--     <script type="text/javascript" src="http://davidlynch.org/projects/maphilight/jquery.maphilight.js"></script> -->
+
+<script>
+$(function(){
+   //Your code
+
+var resizeTime = 100;     // total duration of the resize effect, 0 is instant
+var resizeDelay = 100;    // time to wait before checking the window size again
+                          // the shorter the time, the more reactive it will be.
+                          // short or 0 times could cause problems with old browsers.
+                          $(document).ready(
+    function()
+    {
+        $('img').mapster({
+          fillColor: 'ff0000',
+        fillOpacity: 0.3,
+        isSelectable: false
+        });
+
+    }
+);
+
+// Resize the map to fit within the boundaries provided
+
+function resize(maxWidth,maxHeight) {
+     var image =  $('img'),
+        imgWidth = image.width(),
+        imgHeight = image.height(),
+        newWidth=0,
+        newHeight=0;
+
+    if (imgWidth/maxWidth>imgHeight/maxHeight) {
+        newWidth = maxWidth;
+    } else {
+        newHeight = maxHeight;
+    }
+    image.mapster('resize',newWidth,newHeight,resizeTime);
+}
+
+// Track window resizing events, but only actually call the map resize when the
+// window isn't being resized any more
+
+function onWindowResize() {
+
+    var curWidth = $(window).width(),
+        curHeight = $(window).height(),
+        checking=false;
+    if (checking) {
+        return;
+            }
+    checking = true;
+    window.setTimeout(function() {
+        var newWidth = $(window).width(),
+           newHeight = $(window).height();
+        if (newWidth === curWidth &&
+            newHeight === curHeight) {
+            resize(newWidth,newHeight);
+        }
+        checking=false;
+    },resizeDelay );
+}
+
+$(window).bind('resize',onWindowResize);
+})
+</script>
+<!--<script>
+jQuery(function()
+                            {
+             jQuery('#ImageMap1').maphilight();
+                            });
+  </script>
+-->
+<style>
+
+/*
+.floorplan,
+.room {
+    border: 1px solid #ee7538;
+}
+
+.floorplan {
+    background: #ebecec;
+    height: 300px;
+    position: relative;
+    width: 200px;
+}
+
+.room {
+    background: #fff;
+    color: #000;
+    display: block;
+    font-family: Impact, sans-serif;
+    font-weight: bold;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+}
+
+.room:hover {
+    background: #ee7538;
+    color: #fff;
+}
+
+#room1018 {
+    height: 50px;
+    left: 20px;
+    line-height: 50px;
+    top: 20px;
+    width: 100px;
+}
+
+#room1025 {
+    height: 100px;
+    left: 20px;
+    line-height: 100px;
+    top: 100px;
+    width: 50px;
+}
+
+*/
+</style>
+
+<head>
+
+      <img id="#Image1" src="http://www.image-maps.com/m/private/0/dmgl5vs8ub4tdt9iab70romlu4_floorplan.png" border="0" width="778" height="546" orgWidth="778" orgHeight="546" usemap="#image-maps-2016-05-15-231359" alt="" />
+<map name="image-maps-2016-05-15-231359" id="ImageMapsCom-image-maps-2016-05-15-231359">
+<area room="Bathroom" href="#" alt="Bathroom" title="Bathroom"  shape="rect" coords="325,15,589,150"   />
+<area shape="rect" href="#" coords="776,544,778,546" alt="Image Map"  />
+<area room="kitchen"  href="#"  shape="poly" coords="302,14,304,106,181,230,15,226,16,18"/>
+<area room="LivingRoom" href="#"  shape="poly" coords="16,226,185,230,186,361,350,365,349,526,10,527"     />
+<area room="Bedroom1" href="#"   shape="poly" coords="352,362,744,364,745,527,349,524"      />
+<area room="Corridor"  href="#" shape="poly" coords="260,150,181,231,179,363,726,356,722,152"       />
+</map>
+
+
+  </div>
+
+</head>
+<body>
+
+</body>
+
+
+</html>

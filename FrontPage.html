@@ -3,90 +3,147 @@
 <title>Main Menu</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js"</script>
+  <script src="jquery.imagemapster.min.js"></script>
+     <script type="text/javascript" src="http://davidlynch.org/projects/maphilight/jquery.maphilight.js"></script>
 
+
+<script>
+jQuery(function()
+                            {
+             jQuery('#ImageMap1').maphilight();
+                            });
+  </script>
+
+<style>
+    #spacing {
+        margin: 80px;
+        padding-top: 40px;
+    }
+</style>
+
+<style>
+#topnavbar {
+    margin: 0;
+}
+#topnavbar.affix {
+    position: relative;;
+    top: 0;
+    width: 100%;
+}
+
+.scale
+{
+    height: 1em;
+    width: 1em;
+    vertical-align: bottom;
+}
+
+</style>
+
+<script>
+$('#topnavbar').affix({
+    offset: {
+        top: $('#banner').height()
+    }
+});
+</script>
 <head>
-   <div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container" id="banner">
+    <div class="row">
+        <div align="left">
+        <h1><span style="font-family:Agency FB">  XYZ Automation <span style="float:right" >Amy Brown </span></span></h1>
+
+        </div>
+
+    </div>
+  </div>
+
+   <div class="navbar navbar-default navbar-static-top" role="navigation" id="topnavbar">
         <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="index.html">XYZ</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="#"><img src="images\bulb.jpg"></a></li>
-                    <li><a href="#">Temperature</a></li>
-                    <li class="active"><a href="feedback.html">Feedback</a></li>
-                    <li><a href="#">Security</a></li>
-					          <li><a href="#">Power Management</a></li>
-					          <li><a href="#">Applications</a></li>
-                    <li><a href="#">Settings</a></li>
+                <ul class="nav navbar-nav" style="font-family:Agency FB">
+                    <li><a href="#">  Lights</a></li>
+                    <li class="active">  <a href="#">Temperature</a></li>
+                    <li><a href="#">  Security</a></li>
+					          <li><a href="#"> Power Management</a></li>
+					          <li><a href="#"> Appliances</a></li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <div id="spacing" class=row>
-        <a id="simple-menu" href="#sidr"> <button type="button" class="btn btn-default">Add Comment</button></a>
-
-        <div id="sidr">
-            <form action="addRow()">
-                <div class="form-group">
-                    <label for="name">Name: </label>
-                    <input type="text" class="form-control" id="name" placeholder="Enter Name">
-                </div>
-
-                <div class="form-group">
-                    <label for="comment">Comment: </label>
-                    <textarea class="form-control" rows="4" placeholder="Enter Comment Here" id="comment"></textarea>
-                </div>
-
-                <label for="Experience">Rate your experience of Nandoso: </label>
-
-                <div class="form-group">
-                    <label class="radio-inline"><input type="radio" name="rating">1</label>
-                    <label class="radio-inline"><input type="radio" name="rating">2</label>
-                    <label class="radio-inline"><input type="radio" name="rating" checked="checked">3</label>
-                    <label class="radio-inline"><input type="radio" name="rating">4</label>
-                    <label class="radio-inline"><input type="radio" name="rating">5</label>
-                </div>
-                <button type="button" class="btn btn-default" onClick="sendData(); updateForm()">Submit</button><br />
-                <button type="button" class="btn btn-default" onClick="deleteTable();">Delete</button><br />
-                <button type="button" class="btn btn-default" onClick="reply();">Reply</button>
-
-            </form>
-
-
-        </div>
-
-
-        <script>
-        $(document).ready(function () {
-            $('#simple-menu').sidr();
-        });
-        </script>
-
-            <table class="table table-striped spaced-table" id="feedbackTable">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Comment</th>
-                        <th>Rating</th>
-                        <th>Reply</th>
-                    </tr>
-                </thead>
-                <tbody id="feedbackList"></tbody>
-            </table>
-        </div>
-
-    <hr>
-
-
-    <footer id="spacing1">
-        <p>2015 - Nandoso</p>
-    </footer>
-
 </head>
 <body>
 
+  <div class="floorplan">
+
+      <img id="ImageMap1" src="http://www.image-maps.com/m/private/0/dmgl5vs8ub4tdt9iab70romlu4_floorplan.png" border="0" width="100%" height="auto" orgWidth="778" orgHeight="546" usemap="#image-maps-2016-05-15-231359" alt="" />
+<map name="image-maps-2016-05-15-231359" id="ImageMapsCom-image-maps-2016-05-15-231359">
+<area id="Bathroom" alt="Bathroom" title="Bathroom" data-maphilight='{"strokeColor":"0000ff","strokeWidth":5,"fillColor":"00ff00","fillOpacity":0.6}' shape="rect" coords="325,15,589,150" style="outline:none;" target="_self"     />
+<area shape="rect" coords="776,544,778,546" alt="Image Map" style="outline:none;" title="Image Map" href="http://www.image-maps.com/index.php?aff=mapped_users_66062" />
+<area id="kitchen" alt="Kitchen" title="Kitchen" data-maphilight='{"strokeColor":"0000ff","strokeWidth":5,"fillColor":"00ff00","fillOpacity":0.6}' shape="poly" coords="302,14,304,106,181,230,15,226,16,18" style="outline:none;" target="_self"  />
+<area id="LivingRoom" alt="Living Room" title="Living Room" href="http://www.image-maps.com/" shape="poly" coords="16,226,185,230,186,361,350,365,349,526,10,527" data-maphilight='{"strokeColor":"0000ff","strokeWidth":5,"fillColor":"00ff00","fillOpacity":0.6}' style="outline:none;" target="_self"     />
+<area id="Bedroom1" alt="BR1" title="BedRoom1" href="http://www.image-maps.com/" shape="poly" coords="352,362,744,364,745,527,349,524" data-maphilight='{"strokeColor":"0000ff","strokeWidth":5,"fillColor":"00ff00","fillOpacity":0.6}' style="outline:none;" target="_self"     />
+<area id="Corridor" alt="Corridor" title="Corridor" href="http://www.image-maps.com/" shape="poly" coords="260,150,181,231,179,363,726,356,722,152" data-maphilight='{"strokeColor":"0000ff","strokeWidth":5,"fillColor":"00ff00","fillOpacity":0.6}' style="outline:none;" target="_self"     />
+</map>
+
+
+  </div>
+
+   <script type="text/javascript" src="http://davidjbradshaw.com/imagemap-resizer/js/imageMapResizer.min.js"></script>
+   <script type="text/javascript">
+
+   $('map').imageMapResize();
+
+ </script>
+<script>
+var resizeTime = 100;     // total duration of the resize effect, 0 is instant
+var resizeDelay = 100;    // time to wait before checking the window size again
+                          // the shorter the time, the more reactive it will be.
+                          // short or 0 times could cause problems with old browsers.
+// Resize the map to fit within the boundaries provided
+
+function resize(maxWidth,maxHeight) {
+     var image =  $('img'),
+        imgWidth = image.width(),
+        imgHeight = image.height(),
+        newWidth=0,
+        newHeight=0;
+
+    if (imgWidth/maxWidth>imgHeight/maxHeight) {
+        newWidth = maxWidth;
+    } else {
+        newHeight = maxHeight;
+    }
+    image.mapster('resize',newWidth,newHeight,resizeTime);
+}
+
+// Track window resizing events, but only actually call the map resize when the
+// window isn't being resized any more
+
+function onWindowResize() {
+
+    var curWidth = $(window).width(),
+        curHeight = $(window).height(),
+        checking=false;
+    if (checking) {
+        return;
+            }
+    checking = true;
+    window.setTimeout(function() {
+        var newWidth = $(window).width(),
+           newHeight = $(window).height();
+        if (newWidth === curWidth &&
+            newHeight === curHeight) {
+            resize(newWidth,newHeight);
+        }
+        checking=false;
+    },resizeDelay );
+}
+
+$(window).bind('resize',onWindowResize);
+
+</script>
 </body>
 
 
