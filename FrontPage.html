@@ -3,25 +3,13 @@
 <title>Main Menu</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-<script src="http://code.jquery.com/jquery-latest.min.js"</script>
-  <script src="jquery.imagemapster.min.js"></script>
-     <script type="text/javascript" src="http://davidlynch.org/projects/maphilight/jquery.maphilight.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+ <script src="jquery.imagemapster.min.js"></script>
+ <script src="jquery.imagemapster.js"></script>
 
 
-<script>
-jQuery(function()
-                            {
-             jQuery('#ImageMap1').maphilight();
-                            });
-  </script>
 
-<style>
-    #spacing {
-        margin: 80px;
-        padding-top: 40px;
-    }
-</style>
-
+<script src="ResizeImageMap.js"></script>
 <style>
 #topnavbar {
     margin: 0;
@@ -77,16 +65,15 @@ $('#topnavbar').affix({
 
   <div class="floorplan">
 
-      <img id="ImageMap1" src="http://www.image-maps.com/m/private/0/dmgl5vs8ub4tdt9iab70romlu4_floorplan.png" border="0" width="100%" height="auto" orgWidth="778" orgHeight="546" usemap="#image-maps-2016-05-15-231359" alt="" />
+    <img id="#Image1" src="http://www.image-maps.com/m/private/0/dmgl5vs8ub4tdt9iab70romlu4_floorplan.png" border="0" width="778" height="546" orgWidth="778" orgHeight="546" usemap="#image-maps-2016-05-15-231359" alt="" />
 <map name="image-maps-2016-05-15-231359" id="ImageMapsCom-image-maps-2016-05-15-231359">
-<area id="Bathroom" alt="Bathroom" title="Bathroom" data-maphilight='{"strokeColor":"0000ff","strokeWidth":5,"fillColor":"00ff00","fillOpacity":0.6}' shape="rect" coords="325,15,589,150" style="outline:none;" target="_self"     />
-<area shape="rect" coords="776,544,778,546" alt="Image Map" style="outline:none;" title="Image Map" href="http://www.image-maps.com/index.php?aff=mapped_users_66062" />
-<area id="kitchen" alt="Kitchen" title="Kitchen" data-maphilight='{"strokeColor":"0000ff","strokeWidth":5,"fillColor":"00ff00","fillOpacity":0.6}' shape="poly" coords="302,14,304,106,181,230,15,226,16,18" style="outline:none;" target="_self"  />
-<area id="LivingRoom" alt="Living Room" title="Living Room" href="http://www.image-maps.com/" shape="poly" coords="16,226,185,230,186,361,350,365,349,526,10,527" data-maphilight='{"strokeColor":"0000ff","strokeWidth":5,"fillColor":"00ff00","fillOpacity":0.6}' style="outline:none;" target="_self"     />
-<area id="Bedroom1" alt="BR1" title="BedRoom1" href="http://www.image-maps.com/" shape="poly" coords="352,362,744,364,745,527,349,524" data-maphilight='{"strokeColor":"0000ff","strokeWidth":5,"fillColor":"00ff00","fillOpacity":0.6}' style="outline:none;" target="_self"     />
-<area id="Corridor" alt="Corridor" title="Corridor" href="http://www.image-maps.com/" shape="poly" coords="260,150,181,231,179,363,726,356,722,152" data-maphilight='{"strokeColor":"0000ff","strokeWidth":5,"fillColor":"00ff00","fillOpacity":0.6}' style="outline:none;" target="_self"     />
+<area room="Bathroom" href="#" alt="Bathroom" title="Bathroom"  shape="rect" coords="325,15,589,150"   />
+<area shape="rect" href="#" coords="776,544,778,546" alt="Image Map"  />
+<area room="kitchen"  href="#"  shape="poly" coords="302,14,304,106,181,230,15,226,16,18"/>
+<area room="LivingRoom" href="#"  shape="poly" coords="16,226,185,230,186,361,350,365,349,526,10,527"     />
+<area room="Bedroom1" href="#"   shape="poly" coords="352,362,744,364,745,527,349,524"      />
+<area room="Corridor"  href="#" shape="poly" coords="260,150,181,231,179,363,726,356,722,152"       />
 </map>
-
 
   </div>
 
@@ -96,54 +83,7 @@ $('#topnavbar').affix({
    $('map').imageMapResize();
 
  </script>
-<script>
-var resizeTime = 100;     // total duration of the resize effect, 0 is instant
-var resizeDelay = 100;    // time to wait before checking the window size again
-                          // the shorter the time, the more reactive it will be.
-                          // short or 0 times could cause problems with old browsers.
-// Resize the map to fit within the boundaries provided
 
-function resize(maxWidth,maxHeight) {
-     var image =  $('img'),
-        imgWidth = image.width(),
-        imgHeight = image.height(),
-        newWidth=0,
-        newHeight=0;
-
-    if (imgWidth/maxWidth>imgHeight/maxHeight) {
-        newWidth = maxWidth;
-    } else {
-        newHeight = maxHeight;
-    }
-    image.mapster('resize',newWidth,newHeight,resizeTime);
-}
-
-// Track window resizing events, but only actually call the map resize when the
-// window isn't being resized any more
-
-function onWindowResize() {
-
-    var curWidth = $(window).width(),
-        curHeight = $(window).height(),
-        checking=false;
-    if (checking) {
-        return;
-            }
-    checking = true;
-    window.setTimeout(function() {
-        var newWidth = $(window).width(),
-           newHeight = $(window).height();
-        if (newWidth === curWidth &&
-            newHeight === curHeight) {
-            resize(newWidth,newHeight);
-        }
-        checking=false;
-    },resizeDelay );
-}
-
-$(window).bind('resize',onWindowResize);
-
-</script>
 </body>
 
 
