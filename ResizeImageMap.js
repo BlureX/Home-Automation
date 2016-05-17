@@ -5,7 +5,7 @@ var resizeTime = 100;     // total duration of the resize effect, 0 is instant
 var resizeDelay = 100;    // time to wait before checking the window size again
                           // the shorter the time, the more reactive it will be.
                           // short or 0 times could cause problems with old browsers.
-                          $(document).ready(
+    $(document).ready(
     function()
     {
         $('img').mapster({
