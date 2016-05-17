@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
-
+<link rel="stylesheet" type="text/css" href="css/homeycombs.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/jquery.homeycombs.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.honeycombs').honeycombs();
+    });
+</script>
 <style>
 #tabs {
   overflow: hidden;
@@ -93,22 +100,28 @@ $(document).ready(function() {
     });
 });
 </script>
+<script type="text/javascript">
+$(document).ready(function() {
+$('.honeycombs').honeycombs({
+combWidth: 250,
+margin: 10
+});
+});
+</script>
+<body>
+
+<div class="honeycombs">
+  <div class="comb"><img src="bg.jpg" />
+    <span> Image Caption </span></div>
+
+    <div class="comb"><img src="images/bulb.jpg" />
+      <span> Image Caption </span></div>
+      <div class="comb"><img src="images/elec.png" />
+        <span> Image Caption </span></div>
+        <div class="comb"><img src="bg.jpg" />
+          <span> Image Caption </span></div>
 
 
-<ul id="tabs">
-    <li><a href="#" name="tab1">One</a></li>
-    <li><a href="#" name="tab2">Two</a></li>
-    <li><a href="#" name="tab3">Three</a></li>
-    <li><a href="#" name="tab4">Four</a></li>
-</ul>
-
-<div id="content">
-    <div id="tab1">...</div>
-    <div id="tab2">...</div>
-    <div id="tab3">...</div>
-    <div id="tab4">...</div>
-</div>
-
-
-
+        </div>
+      </body>
 </html>
