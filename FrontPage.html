@@ -8,20 +8,8 @@
  <script src="jquery.imagemapster.min.js"></script>
  <script src="jquery.imagemapster.js"></script>
 <script src="ResizeImageMap.js"></script>
-<style>
-#topnavbar {
-    margin: 0;
-}
-#topnavbar.affix {
-    position: relative;;
-    top: 0;
-    width: 100%;
-}
-.nav li{
-    padding-right:0px;
-   }
+<link rel="stylesheet" href="font-awesome.css">
 
-</style>
 <style>
 .titleHeader{font-size: 5.9vw;
      height:50px;
@@ -111,8 +99,7 @@ background-position:center;
     margin: 0 0 0 -80px;
     }
 
-    @media (min-width:768px) {
-/* centered navigation */
+
  .nav.navbar-nav {
      float: left;
  }
@@ -135,16 +122,27 @@ background-position:center;
  .nav.navbar-collapse {
   text-align: center;
 }
+.navbar {
+   background-color: transparent;
+   background: transparent;
+   border-color: transparent;
+}
+
+.navbar li { color: #000 }
+
+li{
+  font-size: 1.8vw;
 }
 li+li { border-left: 1px solid #000000 }
 li~li { border-left: 1px solid #000000 }
 
+body {
+  background: url(bg.jpg) no-repeat center fixed;
+  background-size: cover;
+}
+
 </style>
 
-
-
-
-</style>
 <script>
 
 </script>
@@ -262,8 +260,10 @@ img {
 
 </style>
 <body >
-  <!--style="background-image:url('background.jpg')"-->
 
+  
+  <!--style="background-image:url('background.jpg')"-->
+<!--
 
 <div id="MapWrapper"  style="text-align:center">
 
@@ -278,7 +278,7 @@ img {
 </map>
 
   </div>
-
+-->
 </body>
 
 
