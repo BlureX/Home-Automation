@@ -11,8 +11,8 @@ var resizeDelay = 100;    // time to wait before checking the window size again
         $('img').mapster({
           fillColor: 'ff0000',
         fillOpacity: 0.3,
-        isSelectable: false,
-        scaleMap: false
+        singleSelect: true,
+        scaleMap: true
         });
 
     }
@@ -24,14 +24,18 @@ function resize(maxWidth,maxHeight) {
      var image =  $('img'),
         imgWidth = image.width(),
         imgHeight = image.height(),
+
         newWidth=0,
         newHeight=0;
+
 
     if (imgWidth/maxWidth>imgHeight/maxHeight) {
         newWidth = maxWidth;
     } else {
         newHeight = maxHeight;
     }
+    console.log(newWidth);
+    console.log(newHeight);
     image.mapster('resize',newWidth,newHeight,resizeTime);
 }
 

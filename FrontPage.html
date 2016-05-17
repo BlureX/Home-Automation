@@ -23,24 +23,113 @@
 
 </style>
 <style>
-h1{font-size:70px;
+.titleHeader{font-size: 5.9vw;
      height:50px;
   text-align:center;
     font-family:Agency FB;
+    display:inline;
 
 }
 
+.leftHeader{
+font-size: 3.2vw;
+  height: 40px;
+  padding-right:30px;
+      display:inline;
+  font-family: Agency FB;
 
 
 }
+.rightHeader{
+font-size: 3.2vw;
+  height: 40px;
+      display:inline;
+padding-left:30px;
+  font-family: Agency FB;
+
+}
+<style>
+body{
+
+  background-image:url('background.jpg');
+background-repeat:no-repeat;
+background-size:contain;
+background-position:center;
+}
+.hexagon {
+    overflow: hidden;
+    visibility: hidden;
+    -webkit-transform: rotate(120deg);
+       -moz-transform: rotate(120deg);
+        -ms-transform: rotate(120deg);
+         -o-transform: rotate(120deg);
+            transform: rotate(120deg);
+    cursor: pointer;
+    }
+.hexagon-in1 {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: rotate(-60deg);
+       -moz-transform: rotate(-60deg);
+        -ms-transform: rotate(-60deg);
+         -o-transform: rotate(-60deg);
+            transform: rotate(-60deg);
+    }
+.hexagon-in2 {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-image: url(http://placekitten.com/240/240);
+    visibility: visible;
+    -webkit-transform: rotate(-60deg);
+       -moz-transform: rotate(-60deg);
+        -ms-transform: rotate(-60deg);
+         -o-transform: rotate(-60deg);
+            transform: rotate(-60deg);
+    }
+.hexagon-in2:hover {
+  display: inline-block;
+ vertical-align: middle;
+ -webkit-transform: translateZ(0);
+ transform: translateZ(0);
+ box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+ -webkit-backface-visibility: hidden;
+ backface-visibility: hidden;
+ -moz-osx-font-smoothing: grayscale;
+ position: relative;
+ -webkit-transition-property: color;
+ transition-property: color;
+ -webkit-transition-duration: 0.3s;
+ transition-duration: 0.3s;
+    }
+
+.hexagon1 {
+    width: 400px;
+    height: 200px;
+    margin: 0 0 0 -80px;
+    }
+
+
+
+</style>
+
+
+
 
 </style>
 <script>
 
 </script>
-<head>
+<head >
     <div class="row" id="container">
-        <h1 text-align="center">  XYZ Automation </h1>
+
+    <span class="leftHeader"> Home  </span>
+    <span class="leftHeader"> Products  </span>
+    <span class="titleHeader"> XYZ Automation</span>
+    <span class="rightHeader"> About  </span>
+      <span class="rightHeader"> Contact us </span>
 
 
   </div>
@@ -97,10 +186,12 @@ img {
 }
 
 </style>
+
+<h1>Amy Brown</h1>
 <div id="container">
     <a>
         <figure>
-            <img src="http://lorempixel.com/100/100/nature/1/" width="100px" height="100px" />
+
             <figcaption>Lights</figcaption>
         </figure>
     </a>
@@ -135,14 +226,16 @@ img {
         </figure>
     </a>
 </div>
-
+    <div class="hexagon hexagon1"><div class="hexagon-in1"><div class="hexagon-in2"></div></div></div>
 </head>
 <style>
   #mapster_wrap_0 {
     margin: 0 auto;
 }
+
 </style>
-<body>
+<body >
+  <!--style="background-image:url('background.jpg')"-->
 
 
 <div id="MapWrapper"  style="text-align:center">
