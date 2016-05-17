@@ -9,125 +9,7 @@
 
 <!--     <script type="text/javascript" src="http://davidlynch.org/projects/maphilight/jquery.maphilight.js"></script> -->
 
-<script>
-$(function(){
-   //Your code
 
-var resizeTime = 100;     // total duration of the resize effect, 0 is instant
-var resizeDelay = 100;    // time to wait before checking the window size again
-                          // the shorter the time, the more reactive it will be.
-                          // short or 0 times could cause problems with old browsers.
-                          $(document).ready(
-    function()
-    {
-        $('img').mapster({
-          fillColor: 'ff0000',
-        fillOpacity: 0.3,
-        isSelectable: false
-        });
-
-    }
-);
-
-// Resize the map to fit within the boundaries provided
-
-function resize(maxWidth,maxHeight) {
-     var image =  $('img'),
-        imgWidth = image.width(),
-        imgHeight = image.height(),
-        newWidth=0,
-        newHeight=0;
-
-    if (imgWidth/maxWidth>imgHeight/maxHeight) {
-        newWidth = maxWidth;
-    } else {
-        newHeight = maxHeight;
-    }
-    image.mapster('resize',newWidth,newHeight,resizeTime);
-}
-
-// Track window resizing events, but only actually call the map resize when the
-// window isn't being resized any more
-
-function onWindowResize() {
-
-    var curWidth = $(window).width(),
-        curHeight = $(window).height(),
-        checking=false;
-    if (checking) {
-        return;
-            }
-    checking = true;
-    window.setTimeout(function() {
-        var newWidth = $(window).width(),
-           newHeight = $(window).height();
-        if (newWidth === curWidth &&
-            newHeight === curHeight) {
-            resize(newWidth,newHeight);
-        }
-        checking=false;
-    },resizeDelay );
-}
-
-$(window).bind('resize',onWindowResize);
-})
-</script>
-<!--<script>
-jQuery(function()
-                            {
-             jQuery('#ImageMap1').maphilight();
-                            });
-  </script>
--->
-<style>
-
-/*
-.floorplan,
-.room {
-    border: 1px solid #ee7538;
-}
-
-.floorplan {
-    background: #ebecec;
-    height: 300px;
-    position: relative;
-    width: 200px;
-}
-
-.room {
-    background: #fff;
-    color: #000;
-    display: block;
-    font-family: Impact, sans-serif;
-    font-weight: bold;
-    position: absolute;
-    text-align: center;
-    text-decoration: none;
-}
-
-.room:hover {
-    background: #ee7538;
-    color: #fff;
-}
-
-#room1018 {
-    height: 50px;
-    left: 20px;
-    line-height: 50px;
-    top: 20px;
-    width: 100px;
-}
-
-#room1025 {
-    height: 100px;
-    left: 20px;
-    line-height: 100px;
-    top: 100px;
-    width: 50px;
-}
-
-*/
-</style>
 
 <head>
 
@@ -146,7 +28,44 @@ jQuery(function()
 
 </head>
 <body>
+  <div id="container">
+      <a>
+          <figure>
 
+              <figcaption>Lights</figcaption>
+          </figure>
+      </a>
+      <a >
+          <figure>
+               <img src="http://lorempixel.com/100/100/nature/2/" width="100px" height="100px" />
+              <figcaption>Temperature</figcaption>
+          </figure>
+      </a>
+      <a>
+          <figure>
+              <img src="http://lorempixel.com/100/100/nature/1/" width="100px" height="100px" />
+              <figcaption>Security</figcaption>
+          </figure>
+      </a>
+      <a>
+          <figure>
+              <img src="http://lorempixel.com/100/100/nature/1/" width="100px" height="100px" />
+              <figcaption>Power Usage</figcaption>
+          </figure>
+      </a>
+      <a>
+          <figure>
+              <img src="http://lorempixel.com/100/100/nature/1/" width="100px" height="100px" />
+              <figcaption>Appliances</figcaption>
+          </figure>
+      </a>
+      <a>
+          <figure>
+              <img src="http://lorempixel.com/100/100/nature/1/" width="100px" height="100px" />
+              <figcaption>Settings</figcaption>
+          </figure>
+      </a>
+  </div>
 </body>
 
 

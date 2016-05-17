@@ -8,7 +8,7 @@
  <script src="jquery.imagemapster.min.js"></script>
  <script src="jquery.imagemapster.js"></script>
 <script src="ResizeImageMap.js"></script>
-<link rel="stylesheet" href="font-awesome.css">
+<link rel="stylesheet" href="hexagonshape.css">
 
 <style>
 .titleHeader{font-size: 5.9vw;
@@ -16,7 +16,7 @@
   text-align:center;
     font-family:Agency FB;
     display:inline;
-
+    color: #ffffff;
 }
 
 .leftHeader{
@@ -25,7 +25,7 @@ font-size: 3.2vw;
   padding-right:30px;
       display:inline;
   font-family: Agency FB;
-
+color: #ffffff;
 
 }
 .rightHeader{
@@ -34,7 +34,7 @@ font-size: 3.2vw;
       display:inline;
 padding-left:30px;
   font-family: Agency FB;
-
+color: #ffffff;
 }
 <style>
 body{
@@ -44,61 +44,6 @@ background-repeat:no-repeat;
 background-size:contain;
 background-position:center;
 }
-.hexagon {
-    overflow: hidden;
-    visibility: hidden;
-    -webkit-transform: rotate(120deg);
-       -moz-transform: rotate(120deg);
-        -ms-transform: rotate(120deg);
-         -o-transform: rotate(120deg);
-            transform: rotate(120deg);
-    cursor: pointer;
-    }
-.hexagon-in1 {
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    -webkit-transform: rotate(-60deg);
-       -moz-transform: rotate(-60deg);
-        -ms-transform: rotate(-60deg);
-         -o-transform: rotate(-60deg);
-            transform: rotate(-60deg);
-    }
-.hexagon-in2 {
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    background-image: url(http://placekitten.com/240/240);
-    visibility: visible;
-    -webkit-transform: rotate(-60deg);
-       -moz-transform: rotate(-60deg);
-        -ms-transform: rotate(-60deg);
-         -o-transform: rotate(-60deg);
-            transform: rotate(-60deg);
-    }
-.hexagon-in2:hover {
-  display: inline-block;
- vertical-align: middle;
- -webkit-transform: translateZ(0);
- transform: translateZ(0);
- box-shadow: 0 0 1px rgba(0, 0, 0, 0);
- -webkit-backface-visibility: hidden;
- backface-visibility: hidden;
- -moz-osx-font-smoothing: grayscale;
- position: relative;
- -webkit-transition-property: color;
- transition-property: color;
- -webkit-transition-duration: 0.3s;
- transition-duration: 0.3s;
-    }
-
-.hexagon1 {
-    width: 400px;
-    height: 200px;
-    margin: 0 0 0 -80px;
-    }
-
 
  .nav.navbar-nav {
      float: left;
@@ -133,13 +78,14 @@ background-position:center;
 li{
   font-size: 1.8vw;
 }
-li+li { border-left: 1px solid #000000 }
-li~li { border-left: 1px solid #000000 }
+li+li { border-left: 2px solid #000000 }
+li~li { border-left: 2px solid #000000 }
 
 body {
   background: url(bg.jpg) no-repeat center fixed;
   background-size: cover;
 }
+
 
 </style>
 
@@ -147,6 +93,7 @@ body {
 
 </script>
 <head >
+
     <div class="row" id="container">
 
     <span class="leftHeader"> Home  </span>
@@ -195,6 +142,7 @@ figure {
 
 
 }
+/*
 img:hover {
     transform: scale(1.1);
     -ms-transform: scale(1.1);
@@ -208,60 +156,55 @@ img {
     -moz-transition: -moz-transform 0.2s;
     -o-transition: -o-transform 0.2s;
 }
-
+*/
 </style>
 
-<h1>Amy Brown</h1>
-<div id="container">
-    <a>
-        <figure>
 
-            <figcaption>Lights</figcaption>
-        </figure>
-    </a>
-    <a >
-        <figure>
-             <img src="http://lorempixel.com/100/100/nature/2/" width="100px" height="100px" />
-            <figcaption>Temperature</figcaption>
-        </figure>
-    </a>
-    <a>
-        <figure>
-            <img src="http://lorempixel.com/100/100/nature/1/" width="100px" height="100px" />
-            <figcaption>Security</figcaption>
-        </figure>
-    </a>
-    <a>
-        <figure>
-            <img src="http://lorempixel.com/100/100/nature/1/" width="100px" height="100px" />
-            <figcaption>Power Usage</figcaption>
-        </figure>
-    </a>
-    <a>
-        <figure>
-            <img src="http://lorempixel.com/100/100/nature/1/" width="100px" height="100px" />
-            <figcaption>Appliances</figcaption>
-        </figure>
-    </a>
-    <a>
-        <figure>
-            <img src="http://lorempixel.com/100/100/nature/1/" width="100px" height="100px" />
-            <figcaption>Settings</figcaption>
-        </figure>
-    </a>
-</div>
-    <div class="hexagon hexagon1"><div class="hexagon-in1"><div class="hexagon-in2"></div></div></div>
+
 </head>
-<style>
-  #mapster_wrap_0 {
-    margin: 0 auto;
-}
 
-
-</style>
 <body >
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="dashboard ">
+          <div class="header">Average Power Consumption</div>
 
-  
+          <div class="content">    <img src=images\elec.png ></div>
+        </div>
+      </div>
+  <div class="col-sm-4">
+    <div class="dashboard ">
+        <div class="header">Average Power Consumption</div>
+
+        <div class="content">    <img src=images\elec.png></div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="dashboard ">
+        <div class="header">Average Power Consumption</div>
+
+        <div class="content">    <img src=images\elec.png></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+  <div class="container">
+  <div class="row">
+    <div class="col-md-7" style="text-align:center">
+      <h1>Welcome Back <br>Amy Brown</h1>
+
+
+    </div>
+    <div class="col-md-5" id="hex" style="text-align:center">
+      <img src=images\elec.png>
+    </div>
+  </div>
+</div>
+
+
   <!--style="background-image:url('background.jpg')"-->
 <!--
 
@@ -279,6 +222,8 @@ img {
 
   </div>
 -->
+
+
 </body>
 
 

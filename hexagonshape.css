@@ -1,0 +1,26 @@
+.dashboard .content {
+    overflow: hidden;
+
+    font-size: 15px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 1px solid gray;
+  /*  color: #3385FF; */
+  color:black;
+    background: #67A16F;
+}
+.dashboard .header {
+    height:2vw;
+    line-height:2vw;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background:gray;
+    font-size:1.5vw;
+    font-family:Agency FB;
+    display:block;
+    color:white;
+    display:block;
+    padding-left:0.5vw;
+    border: 1px solid gray;
+
+}
