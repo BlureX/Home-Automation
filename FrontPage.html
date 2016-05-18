@@ -84,6 +84,11 @@ background-position:center;
    background: transparent;
    border-color: transparent;
 }
+.normalfont{
+  font-size: 1vw;
+  font-family:Agency FB;
+
+}
 
 .navbar li { color: #000 }
 
@@ -92,7 +97,7 @@ li{
 }
 li+li { border-left: 2px solid #000000 }
 li~li { border-left: 2px solid #000000 }
-ul.nav a:hover { color: #ffffff !important; }
+ul.nav a:hover { color: #14DCEB !important; }
 body {
   background: url(bg.jpg) no-repeat center fixed;
   background-size: cover;
@@ -164,6 +169,27 @@ img {
     -o-transition: -o-transform 0.2s;
 }
 */
+.item:hover
+{
+    transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+  }
+
+  .item{
+transition :transform 0.2s;
+-webkit-transition: -webkit-transform 0.2s;
+-moz-transition: -moz-transform 0.2s;
+-o-transition: -o-transform 0.2s;
+  }
+
+  .bluehover:hover {
+      color: #14DCEB;
+  }
+
+
 </style>
 
 
@@ -172,12 +198,12 @@ img {
 
 <body >
 
-  <div class="container-fluid" id="overviewWindow">
+  <div class="container-fluid" style="padding-left:2vw" id="overviewWindow">
       <div> <span class="minititle">Overview</span></div>
 
     <div class="row"  style="padding-top:0.5vw; padding-bottom:0.5vw;">
       <div class="col-sm-4">
-        <div class="dashboard ">
+        <div class="dashboard item">
           <div class="header">Average Power Consumption</div>
 
           <div class="content">    <img src=images\elec.png max-width:100%;
@@ -185,7 +211,7 @@ max-height:100%></div>
         </div>
       </div>
   <div class="col-sm-8">
-    <div class="dashboard ">
+    <div class="dashboard">
         <div class="header">News Feed</div>
 
         <div class="content" style="overflow: auto;"><p>7th January 2017 <br>
@@ -215,32 +241,124 @@ max-height:100%></div>
   </div>
 
 </div>
+
+<style>
+.vcenter {
+  vertical-align: middle;
+ display: inline-block;
+}
+
+</style>
 <!--2nd row-->
 <div class="row"  style="padding-top:0.5vw; padding-bottom:0.5vw;" >
   <div class="col-sm-2">
-    <div class="dashboard ">
-        <div class="header">Average Power Consumption</div>
+    <div class="dashboard item">
+        <div class="header">Appliances</div>
 
         <div class="content">    <img src=images\dishwasher.png ></div>
     </div>
   </div>
   <div class="col-sm-2">
-    <div class="dashboard ">
-        <div class="header">Average Power Consumption</div>
+    <div class="dashboard item">
+        <div class="header">Lights</div>
 
         <div class="content">    <img src=images\lightbulb.png></div>
 
   </div>
 </div>
+<script>
+$(document).ready(function(){
+    $("#RA1").hover(function(){
+        $('#RA1ICON').css("color", "#14DCEB");
+        }, function(){
+        $('#RA1ICON').css("color", "white");
+    });
+});
+
+$(document).ready(function(){
+    $("#RA2").hover(function(){
+        $('#RA2ICON').css("color", "#14DCEB");
+        }, function(){
+        $('#RA2ICON').css("color", "white");
+    });
+});
+
+$(document).ready(function(){
+    $("#RA3").hover(function(){
+        $('#RA3ICON').css("color", "#14DCEB");
+        }, function(){
+        $('#RA3ICON').css("color", "white");
+    });
+});
+
+$(document).ready(function(){
+    $("#RA4").hover(function(){
+        $('#RA4ICON').css("color", "#14DCEB");
+        }, function(){
+        $('#RA4ICON').css("color", "white");
+    });
+});
+
+$(document).ready(function(){
+    $("#RA5").hover(function(){
+        $('#RA5ICON').css("color", "#14DCEB");
+        }, function(){
+        $('#RA5ICON').css("color", "white");
+    });
+});
+
+$(document).ready(function(){
+    $("#RA6").hover(function(){
+        $('#RA6ICON').css("color", "#14DCEB");
+        }, function(){
+        $('#RA6ICON').css("color", "white");
+    });
+});
+
+</script>
 <div class="col-sm-4">
-  <div class="dashboard ">
+  <div class="dashboard item">
       <div class="header">Recent Activities</div>
 
-          <div class="content" style="overflow: auto;">
-            <p>Envelope icon: <span class="glyphicon glyphicon-envelope white"></span></p>
-<p>Search icon: <span class="glyphicon glyphicon-search white"></span></p>
-<p>Print icon: <span class="glyphicon glyphicon-print white"></span></p>
-      
+          <div class="content">
+
+            <div class="row" id="RA1" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
+              <div class="col-sm-2 col-sm-offset-1">
+              <span class="glyphicon glyphicon-off white vcenter " style="padding:0.3vw" id="RA1ICON"></span></div>
+              <div class="col-sm-9 white">Turned off oven.</div>
+            </div>
+
+            <div class="row" id="RA2" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
+              <div class="col-sm-2 col-sm-offset-1">
+              <span class="glyphicon glyphicon-lock white" style="padding:0.3vw" id="RA2ICON"></span></div>
+              <div class="col-sm-9 white">Locked front door.</div>
+            </div>
+
+            <div class="row" id="RA3" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
+              <div class="col-sm-2 col-sm-offset-1">
+              <span class="glyphicon glyphicon-lock white" style="padding:0.3vw" id="RA3ICON" ></span></div>
+              <div class="col-sm-9 white">Blinds shut.</div>
+            </div>
+
+            <div class="row" id="RA4" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
+              <div class="col-sm-2 col-sm-offset-1">
+              <span class="glyphicon glyphicon-flash white" style="padding:0.3vw" id="RA4ICON"></span></div>
+              <div class="col-sm-9 white">View Power Management.</div>
+            </div>
+
+            <div class="row" id="RA5" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
+              <div class="col-sm-2 col-sm-offset-1">
+              <span class="glyphicon glyphicon-fire white" style="padding:0.3vw" id="RA5ICON"></span></div>
+              <div class="col-sm-9 white">Turn on fireplace</div>
+            </div>
+
+            <div class="row" id="RA6" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent; border-bottom-color: transparent">
+              <div class="col-sm-2 col-sm-offset-1">
+              <span class="glyphicon glyphicon-home white" style="padding:0.3vw" id="RA6ICON"></span></div>
+
+              <div class="col-sm-9 white">Set temperature to 21 degrees.</div>
+            </div>
+</div>
              </div>
 
 </div>
@@ -248,16 +366,43 @@ max-height:100%></div>
 .white, .white a {
   color: #fff;
 }
+
+
 </style>
-</div>
+
 <div class="col-sm-4">
-  <div class="dashboard ">
+  <div class="dashboard item">
       <div class="header">Favourties</div>
 
-             <div class="content" style="overflow: auto;">
-               <p>Envelope icon: <span class="glyphicon glyphicon-envelope white"></span></p>
-<p>Search icon: <span class="glyphicon glyphicon-search white"></span></p>
-<p>Print icon: <span class="glyphicon glyphicon-print white"></span></p>
+      <div class="content">
+        <div class="row" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
+          <div class="col-sm-2 col-sm-offset-1 optionselect">
+          <span class="glyphicon glyphicon-off white vcenter" style="padding:0.3vw" ></span></div>
+
+          <div class="col-sm-9 white">Oven</div>
+        </div>
+        <div class="row" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
+          <div class="col-sm-2 col-sm-offset-1">
+          <span class="glyphicon glyphicon-lock white" style="padding:0.3vw" ></span></div>
+
+          <div class="col-sm-9 white">Turn off all lights.</div>
+        </div>
+
+        <div class="row" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
+          <div class="col-sm-2 col-sm-offset-1">
+          <span class="glyphicon glyphicon-lock white" style="padding:0.3vw" ></span></div>
+
+          <div class="col-sm-9 white">Blinds shut.</div>
+        </div>
+
+
+        <div class="row" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent; border-bottom-color: transparent">
+          <div class="col-sm-2 col-sm-offset-1">
+          <span class="glyphicon glyphicon-home white" style="padding:0.3vw" ></span></div>
+
+          <div class="col-sm-9 white">Set temperature to 21 degrees.</div>
+        </div>
+</div>
              </div>
 
 </div>
