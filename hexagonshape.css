@@ -7,7 +7,7 @@
     border: 1px solid gray;
     max-height:19vw;
   /*  color: #3385FF; */
-  color:black;
+  color:#fff;
     /*background: #67A16F;*/
     background:#424242;
 }
@@ -19,6 +19,7 @@
     background:gray;
     font-size:1.5vw;
     font-family:Agency FB;
+    font-weight: bold;
     display:block;
     color:white;
     display:block;

@@ -85,7 +85,7 @@ background-position:center;
    border-color: transparent;
 }
 .normalfont{
-  font-size: 1vw;
+  font-size: 1.5vw;
   font-family:Agency FB;
 
 }
@@ -214,12 +214,15 @@ max-height:100%></div>
     <div class="dashboard">
         <div class="header">News Feed</div>
 
-        <div class="content" style="overflow: auto;"><p>7th January 2017 <br>
-        XYZ has unveiled one of its newest products dubbed "Ice Machine" where users can select a cooooooooooooooool cool thing.
-        7th January 2017 <br>
-        XYZ has unveiled one of its newest products dubbed "Ice Machine" where users can select a cooooooooooooooool cool thing.
-        7th January 2017 <br>
-        XYZ has unveiled one of its newest products dubbed "Ice Machine" where users can select a cooooooooooooooool cool thing.
+        <div class="content normalfont" style="overflow: auto;"><p><i>7th January 2017</i> <br>
+        XYZ Automation has unveiled one of its newest products called the "Ice Machine". Users can manipulate the ice in many ways so that it can fit there needs.
+        Many applications of the Ice Machine could be from making ice cubes for your drinks to creating delicious slushies. <br><br>
+        <i>2nd January 2017</i><br>
+        There has been a recent update in the XYZ Oven appliances which allows detection of when your food is about to be burnt. We advise all consumers
+        to update there oven so that they can take full advantage of this handy feature.<br><br>
+        <i> 25th December 2016 </i><br>
+        XYZ wishes all our customers a Merry Christmas. We hope you have a safe christmas and are satisfied with your XYZ Automation appliances. We will also be unveiling
+        a new product early next year which we hope you will be anticipating.
         7th January 2017 <br>
         XYZ has unveiled one of its newest products dubbed "Ice Machine" where users can select a cooooooooooooooool cool thing.
         7th January 2017 <br>
@@ -315,6 +318,34 @@ $(document).ready(function(){
     });
 });
 
+$(document).ready(function(){
+    $("#RA7").hover(function(){
+        $('#RA7ICON').css("color", "#14DCEB");
+        }, function(){
+        $('#RA7ICON').css("color", "white");
+    });
+});
+$(document).ready(function(){
+    $("#RA8").hover(function(){
+        $('#RA8ICON').css("color", "#14DCEB");
+        }, function(){
+        $('#RA8ICON').css("color", "white");
+    });
+});
+$(document).ready(function(){
+    $("#RA9").hover(function(){
+        $('#RA9ICON').css("color", "#14DCEB");
+        }, function(){
+        $('#RA9ICON').css("color", "white");
+    });
+});
+$(document).ready(function(){
+    $("#RA10").hover(function(){
+        $('#RA10ICON').css("color", "#14DCEB");
+        }, function(){
+        $('#RA10ICON').css("color", "white");
+    });
+});
 </script>
 <div class="col-sm-4">
   <div class="dashboard item">
@@ -325,38 +356,38 @@ $(document).ready(function(){
             <div class="row" id="RA1" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
               <div class="col-sm-2 col-sm-offset-1">
               <span class="glyphicon glyphicon-off white vcenter " style="padding:0.3vw" id="RA1ICON"></span></div>
-              <div class="col-sm-9 white">Turned off oven.</div>
+              <div class="col-sm-9 white normalfont">Turned off oven.</div>
             </div>
 
             <div class="row" id="RA2" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
               <div class="col-sm-2 col-sm-offset-1">
               <span class="glyphicon glyphicon-lock white" style="padding:0.3vw" id="RA2ICON"></span></div>
-              <div class="col-sm-9 white">Locked front door.</div>
+              <div class="col-sm-9 white normalfont">Locked front door.</div>
             </div>
 
             <div class="row" id="RA3" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
               <div class="col-sm-2 col-sm-offset-1">
               <span class="glyphicon glyphicon-lock white" style="padding:0.3vw" id="RA3ICON" ></span></div>
-              <div class="col-sm-9 white">Blinds shut.</div>
+              <div class="col-sm-9 white normalfont">Blinds shut.</div>
             </div>
 
             <div class="row" id="RA4" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
               <div class="col-sm-2 col-sm-offset-1">
               <span class="glyphicon glyphicon-flash white" style="padding:0.3vw" id="RA4ICON"></span></div>
-              <div class="col-sm-9 white">View Power Management.</div>
+              <div class="col-sm-9 white normalfont">View Power Management.</div>
             </div>
 
             <div class="row" id="RA5" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
               <div class="col-sm-2 col-sm-offset-1">
               <span class="glyphicon glyphicon-fire white" style="padding:0.3vw" id="RA5ICON"></span></div>
-              <div class="col-sm-9 white">Turn on fireplace</div>
+              <div class="col-sm-9 white normalfont">Turn on fireplace</div>
             </div>
 
             <div class="row" id="RA6" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent; border-bottom-color: transparent">
               <div class="col-sm-2 col-sm-offset-1">
               <span class="glyphicon glyphicon-home white" style="padding:0.3vw" id="RA6ICON"></span></div>
 
-              <div class="col-sm-9 white">Set temperature to 21 degrees.</div>
+              <div class="col-sm-9 white normalfont">Set temperature to 21 degrees.</div>
             </div>
 </div>
              </div>
@@ -375,32 +406,32 @@ $(document).ready(function(){
       <div class="header">Favourties</div>
 
       <div class="content">
-        <div class="row" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
+        <div class="row" id="RA7" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
           <div class="col-sm-2 col-sm-offset-1 optionselect">
-          <span class="glyphicon glyphicon-off white vcenter" style="padding:0.3vw" ></span></div>
+          <span class="glyphicon glyphicon-off white vcenter" id="RA7ICON" style="padding:0.3vw" ></span></div>
 
-          <div class="col-sm-9 white">Oven</div>
+          <div class="col-sm-9 white normalfont">Appliances - Oven</div>
         </div>
-        <div class="row" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
+        <div class="row" id="RA8" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
           <div class="col-sm-2 col-sm-offset-1">
-          <span class="glyphicon glyphicon-lock white" style="padding:0.3vw" ></span></div>
+          <span class="glyphicon glyphicon-lock white" id="RA8ICON" style="padding:0.3vw" ></span></div>
 
-          <div class="col-sm-9 white">Turn off all lights.</div>
-        </div>
-
-        <div class="row" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
-          <div class="col-sm-2 col-sm-offset-1">
-          <span class="glyphicon glyphicon-lock white" style="padding:0.3vw" ></span></div>
-
-          <div class="col-sm-9 white">Blinds shut.</div>
+          <div class="col-sm-9 white normalfont">Turn off all lights</div>
         </div>
 
-
-        <div class="row" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent; border-bottom-color: transparent">
+        <div class="row" id="RA9" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
           <div class="col-sm-2 col-sm-offset-1">
-          <span class="glyphicon glyphicon-home white" style="padding:0.3vw" ></span></div>
+          <span class="glyphicon glyphicon-lock white" id="RA9ICON" style="padding:0.3vw" ></span></div>
 
-          <div class="col-sm-9 white">Set temperature to 21 degrees.</div>
+          <div class="col-sm-9 white normalfont">Security - Front Doors</div>
+        </div>
+
+
+        <div class="row" id="RA10" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent; border-bottom-color: transparent">
+          <div class="col-sm-2 col-sm-offset-1">
+          <span class="glyphicon glyphicon-home white" id="RA10ICON" style="padding:0.3vw" ></span></div>
+
+          <div class="col-sm-9 white normalfont">Temperature - Living Room</div>
         </div>
 </div>
              </div>
