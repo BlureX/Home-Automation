@@ -36,6 +36,18 @@ padding-left:30px;
   font-family: Agency FB;
 color: #ffffff;
 }
+
+.minititle{
+  text-align:center;
+  height: 35px;
+  font-size: 2.5vw;
+  font-family:Agency FB;
+  display:inline;
+  color: #ffffff;
+  border-bottom:3px solid #FFFFFF;
+  padding-bottom: 0.2vw;
+
+}
 <style>
 body{
 
@@ -76,11 +88,11 @@ background-position:center;
 .navbar li { color: #000 }
 
 li{
-  font-size: 1.8vw;
+  font-size: 2.2vw;
 }
 li+li { border-left: 2px solid #000000 }
 li~li { border-left: 2px solid #000000 }
-
+ul.nav a:hover { color: #ffffff !important; }
 body {
   background: url(bg.jpg) no-repeat center fixed;
   background-size: cover;
@@ -136,12 +148,7 @@ figcaption {
     color: #bb3333;
 
 }
-figure {
-    padding: 5px;
-        border: 2px solid #000;
 
-
-}
 /*
 img:hover {
     transform: scale(1.1);
@@ -164,8 +171,11 @@ img {
 </head>
 
 <body >
-  <div class="container-fluid">
-    <div class="row">
+
+  <div class="container-fluid" id="overviewWindow">
+      <div> <span class="minititle">Overview</span></div>
+
+    <div class="row"  style="padding-top:0.5vw; padding-bottom:0.5vw;">
       <div class="col-sm-4">
         <div class="dashboard ">
           <div class="header">Average Power Consumption</div>
@@ -174,36 +184,88 @@ img {
 max-height:100%></div>
         </div>
       </div>
-  <div class="col-sm-4">
+  <div class="col-sm-8">
+    <div class="dashboard ">
+        <div class="header">News Feed</div>
+
+        <div class="content" style="overflow: auto;"><p>7th January 2017 <br>
+        XYZ has unveiled one of its newest products dubbed "Ice Machine" where users can select a cooooooooooooooool cool thing.
+        7th January 2017 <br>
+        XYZ has unveiled one of its newest products dubbed "Ice Machine" where users can select a cooooooooooooooool cool thing.
+        7th January 2017 <br>
+        XYZ has unveiled one of its newest products dubbed "Ice Machine" where users can select a cooooooooooooooool cool thing.
+        7th January 2017 <br>
+        XYZ has unveiled one of its newest products dubbed "Ice Machine" where users can select a cooooooooooooooool cool thing.
+        7th January 2017 <br>
+        XYZ has unveiled one of its newest products dubbed "Ice Machine" where users can select a cooooooooooooooool cool thing.
+        7th January 2017 <br>
+        XYZ has unveiled one of its newest products dubbed "Ice Machine" where users can select a cooooooooooooooool cool thing.
+        7th January 2017 <br>
+        XYZ has unveiled one of its newest products dubbed "Ice Machine" where users can select a cooooooooooooooool cool thing.
+        7th January 2017 <br>
+        XYZ has unveiled one of its newest products dubbed "Ice Machine" where users can select a cooooooooooooooool cool thing.
+        7th January 2017 <br>
+        XYZ has unveiled one of its newest products dubbed "Ice Machine" where users can select a cooooooooooooooool cool thing.
+        7th January 2017 <br>
+        XYZ has unveiled one of its newest products dubbed "Ice Machine" where users can select a cooooooooooooooool cool thing.
+        7th January 2017 <br>
+        XYZ has unveiled one of its newest products dubbed "Ice Machine" where users can select a cooooooooooooooool cool thing.</p>
+         </div>
+    </div>
+  </div>
+
+</div>
+<!--2nd row-->
+<div class="row"  style="padding-top:0.5vw; padding-bottom:0.5vw;" >
+  <div class="col-sm-2">
     <div class="dashboard ">
         <div class="header">Average Power Consumption</div>
 
-        <div class="content">    <img src=images\elec.png></div>
+        <div class="content">    <img src=images\dishwasher.png ></div>
     </div>
   </div>
-  <div class="col-sm-4">
+  <div class="col-sm-2">
     <div class="dashboard ">
         <div class="header">Average Power Consumption</div>
 
-        <div class="content">    <img src=images\elec.png></div>
-    </div>
+        <div class="content">    <img src=images\lightbulb.png></div>
+
   </div>
 </div>
+<div class="col-sm-4">
+  <div class="dashboard ">
+      <div class="header">Recent Activities</div>
 
+          <div class="content" style="overflow: auto;">
+            <p>Envelope icon: <span class="glyphicon glyphicon-envelope white"></span></p>
+<p>Search icon: <span class="glyphicon glyphicon-search white"></span></p>
+<p>Print icon: <span class="glyphicon glyphicon-print white"></span></p>
+      
+             </div>
 
 </div>
-  <div class="container">
-  <div class="row">
-    <div class="col-md-7" style="text-align:center">
-      <h1>Welcome Back <br>Amy Brown</h1>
-
-
-    </div>
-    <div class="col-md-5" id="hex" style="text-align:center">
-      <img src=images\elec.png>
-    </div>
-  </div>
+<style>
+.white, .white a {
+  color: #fff;
+}
+</style>
 </div>
+<div class="col-sm-4">
+  <div class="dashboard ">
+      <div class="header">Favourties</div>
+
+             <div class="content" style="overflow: auto;">
+               <p>Envelope icon: <span class="glyphicon glyphicon-envelope white"></span></p>
+<p>Search icon: <span class="glyphicon glyphicon-search white"></span></p>
+<p>Print icon: <span class="glyphicon glyphicon-print white"></span></p>
+             </div>
+
+</div>
+</div>
+</div>
+
+</div>
+
 
 
   <!--style="background-image:url('background.jpg')"-->
