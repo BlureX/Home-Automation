@@ -201,7 +201,7 @@ transition :transform 0.2s;
 
 <body >
 
-  <div class="container-fluid" style="padding-left:2vw" id="overviewWindow">
+  <div class="container-fluid" style="padding-left:2vw;display:none" id="overviewWindow" >
       <div> <span class="minititle">Overview</span></div>
 
     <div class="row"  style="padding-top:0.5vw; padding-bottom:0.5vw;">
@@ -443,25 +443,96 @@ $(document).ready(function(){
 
 
 
-  <!--style="background-image:url('background.jpg')"-->
-<!--
 
-<div id="MapWrapper"  style="text-align:center">
 
-    <img class="mapster-wrapper" id="#Image1" src="http://www.image-maps.com/m/private/0/dmgl5vs8ub4tdt9iab70romlu4_floorplan.png" border="0" usemap="#image-maps-2016-05-15-231359"  align="middle"/>
-<map name="image-maps-2016-05-15-231359" id="ImageMapsCom-image-maps-2016-05-15-231359">
-<area room="Bathroom" href="#" alt="Bathroom" title="Bathroom"  shape="rect" coords="325,15,589,150"   />
-<area shape="rect" href="#" coords="776,544,778,546" alt="Image Map"  />
-<area room="kitchen"  href="#"  shape="poly" coords="302,14,304,106,181,230,15,226,16,18"/>
-<area room="LivingRoom" href="#"  shape="poly" coords="16,226,185,230,186,361,350,365,349,526,10,527"     />
-<area room="Bedroom1" href="#"   shape="poly" coords="352,362,744,364,745,527,349,524"      />
-<area room="Corridor"  href="#" shape="poly" coords="260,150,181,231,179,363,726,356,722,152"       />
-</map>
+<style>
 
+
+
+</style>
+<div class="container-fluid" style="padding-left:2vw;" id="LightWindow">
+
+<div class="row">
+
+  <div class="col-sm-7 MapWrapper"  style="border:1px solid blue">
+  <div id="MapWrapper" style="border:1px solid green; height:40vw">
+  <img id="Image-Maps-Com-image-maps-2016-05-18-222037" src="images\map.png" border="0" usemap="#image-maps-2016-05-18-222037" alt="" width:"100%;"/>
+  <map name="image-maps-2016-05-18-222037" id="ImageMapsCom-image-maps-2016-05-18-222037">
+  <area  alt="" title="Bedroom" href="#" shape="rect" coords="10,11,339,150" style="outline:none;" target="_self"     />
+  <area  alt="" title="Living Room" href="#" shape="rect" coords="11,159,340,493" style="outline:none;" target="_self"     />
+  <area  alt="" title="Storage" href="#" shape="rect" coords="349,237,494,299" style="outline:none;" target="_self"     />
+  <area  alt="" title="Hallway" href="#" shape="rect" coords="350,10,635,228" style="outline:none;" target="_self"     />
+  <area  alt="" title="Bathroom" href="#" shape="rect" coords="644,11,839,227" style="outline:none;" target="_self"     />
+  <area shape="rect" coords="846,502,848,504" alt="Image Map" style="outline:none;" title="Image Map" href="#" />
+  <area  alt="" title="Kitchen" href="#" shape="poly" coords="505,239,505,313,350,314,349,493,836,492,836,238" style="outline:none;" target="_self"     />
+  </map>
   </div>
+  </div>
+  <div class="col-sm-5" id="lightWindow">
+    <div>
+      <div class="dashboard item">
+          <div class="header">Favourties</div>
+
+          <div class="content">
+            <div class="row" id="RA7" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
+              <div class="col-sm-2 col-sm-offset-1 optionselect">
+              <span class="glyphicon glyphicon-star white vcenter" id="RA7ICON" style="padding:0.3vw" ></span></div>
+
+              <div class="col-sm-9 white normalfont">Appliances - Oven</div>
+            </div>
+            <div class="row" id="RA8" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
+              <div class="col-sm-2 col-sm-offset-1">
+              <span class="glyphicon glyphicon-star white" id="RA8ICON" style="padding:0.3vw" ></span></div>
+
+              <div class="col-sm-9 white normalfont">Appliances - TV</div>
+            </div>
+
+            <div class="row" id="RA9" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
+              <div class="col-sm-2 col-sm-offset-1">
+              <span class="glyphicon glyphicon-lock white" id="RA9ICON" style="padding:0.3vw" ></span></div>
+
+              <div class="col-sm-9 white normalfont">Security - Front Doors</div>
+            </div>
+
+
+            <div class="row" id="RA10" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent; border-bottom-color: transparent">
+              <div class="col-sm-2 col-sm-offset-1">
+              <span class="glyphicon glyphicon-home white" id="RA10ICON" style="padding:0.3vw" ></span></div>
+
+              <div class="col-sm-9 white normalfont">Temperature - Living Room</div>
+            </div>
+    </div>
+                 </div>
+
+    </div>
+
+
+
+
+
+
+</div>
+<!--
+<div class="row" style="border:1px solid red">
+  <div class="container " style="border:1px solid green">
+<div class="col-sm-7" id="MapContainer" style="border:1px solid blue">
+<div id="MapWrapper">
+<img id="Image-Maps-Com-image-maps-2016-05-18-222037" src="http://www.image-maps.com/m/private/0/5vlhahsqcmnfujtbqthdts2k23_floorplan.png" border="0" usemap="#image-maps-2016-05-18-222037" alt="" width:"100%;"/>
+<map name="image-maps-2016-05-18-222037" id="ImageMapsCom-image-maps-2016-05-18-222037">
+<area  alt="" title="Bedroom" href="#" shape="rect" coords="10,11,339,150" style="outline:none;" target="_self"     />
+<area  alt="" title="Living Room" href="#" shape="rect" coords="11,159,340,493" style="outline:none;" target="_self"     />
+<area  alt="" title="Storage" href="#" shape="rect" coords="349,237,494,299" style="outline:none;" target="_self"     />
+<area  alt="" title="Hallway" href="#" shape="rect" coords="350,10,635,228" style="outline:none;" target="_self"     />
+<area  alt="" title="Bathroom" href="#" shape="rect" coords="644,11,839,227" style="outline:none;" target="_self"     />
+<area shape="rect" coords="846,502,848,504" alt="Image Map" style="outline:none;" title="Image Map" href="#" />
+<area  alt="" title="Kitchen" href="#" shape="poly" coords="505,239,505,313,350,314,349,493,836,492,836,238" style="outline:none;" target="_self"     />
+</map>
+</div>
+</div>
+</div>
+</div>
+</div>
 -->
-
-
 </body>
 
 

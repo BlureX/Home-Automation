@@ -21,21 +21,26 @@ var resizeDelay = 100;    // time to wait before checking the window size again
 // Resize the map to fit within the boundaries provided
 
 function resize(maxWidth,maxHeight) {
-     var image =  $('img'),
-        imgWidth = image.width(),
-        imgHeight = image.height(),
+     var image =  $('img');
+
+     imgWidth = image.width();
+     imgHeight = image.height();
+
+
+            imgHeight = maxWidth / 1.85;
+            imgWidth = maxWidth;
+
+
+
 
         newWidth=0,
         newHeight=0;
-
 
     if (imgWidth/maxWidth>imgHeight/maxHeight) {
         newWidth = maxWidth;
     } else {
         newHeight = maxHeight;
     }
-    console.log(newWidth);
-    console.log(newHeight);
     image.mapster('resize',newWidth,newHeight,resizeTime);
 }
 
@@ -44,20 +49,22 @@ function resize(maxWidth,maxHeight) {
 
 function onWindowResize() {
 
-    var curWidth = $(window).width(),
-        curHeight = $(window).height(),
+  console.log("testing");
+
+    var curWidth = $(".MapWrapper").width(),
+        curHeight = $(".MapWrapper").height(),
         checking=false;
     if (checking) {
         return;
             }
     checking = true;
     window.setTimeout(function() {
-        var newWidth = $(window).width(),
-           newHeight = $(window).height();
-        if (newWidth === curWidth &&
-            newHeight === curHeight) {
+        var newWidth = $(".MapWrapper").width(),
+           newHeight = $(".MapWrapper").height();
+
+
             resize(newWidth,newHeight);
-        }
+
         checking=false;
     },resizeDelay );
 }
