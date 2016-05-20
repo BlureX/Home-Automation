@@ -24,15 +24,38 @@ var resizeDelay = 100;    // time to wait before checking the window size again
         document.getElementById(e.key).className = "";
           document.getElementById(e.key).className = "fa fa-lock";
 
-            console.log(document.getElementById(e.key));
            }else{
-
   document.getElementById(e.key).className = "";
         document.getElementById(e.key).className = "fa fa-unlock";
-              console.log(document.getElementById(e.key));
+
            }
 
-         }
+         },
+         areas: [
+     {
+         key: 'K1',
+         selected: true
+     },
+     {
+         key: 'K2',
+         selected: true
+     },
+     {
+       key: 'K3',
+       selected:true
+     },
+     {
+       key: 'B1',
+       selected:true
+     },
+     {
+       key: 'LR1',
+       selected:true
+     },
+     {
+       key: 'LR2',
+       selected:true
+     } ]
         });
 
     }
