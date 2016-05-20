@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<title>Main Menu</title>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+ <script src="jquery.imagemapster.min.js"></script>
+ <script src="jquery.imagemapster.js"></script>
+<script src="ResizeImageMap.js"></script>
+<link rel="stylesheet" href="hexagonshape.css">
+<script src="rangeSlider.js"></script>
+<link rel="stylesheet" href="rangeSlider.css">
+
+<style>
+.titleHeader{font-size: 5.9vw;
+     height:50px;
+  text-align:center;
+    font-family:Agency FB;
+    display:inline;
+    color: #ffffff;
+}
+
+.leftHeader{
+font-size: 3.2vw;
+  height: 40px;
+  padding-right:2.7vw;
+      display:inline;
+  font-family: Agency FB;
+color: #ffffff;
+
+}
+.rightHeader{
+font-size: 3.2vw;
+  height: 40px;
+      display:inline;
+padding-left:2.7vw;
+  font-family: Agency FB;
+color: #ffffff;
+}
+
+.minititle{
+  text-align:center;
+  height: 35px;
+  font-size: 2.5vw;
+  font-family:Agency FB;
+  display:inline;
+  color: #ffffff;
+  border-bottom:3px solid #FFFFFF;
+  padding-bottom: 0.2vw;
+
+}
+<style>
+body{
+
+  background-image:url('background.jpg');
+background-repeat:no-repeat;
+background-size:contain;
+background-position:center;
+}
+
+
+ .nav.navbar-nav {
+     clear: left;
+     float: left;
+     margin: 0;
+     padding: 0;
+     position: relative;
+     left: 50%;
+     text-align: center;
+ }
+ .nav.navbar-nav > li {
+     position: relative;
+     right: 50%;
+ }
+ .nav.navbar-nav li {
+    text-align: left
+ }
+
+.navbar {
+   background-color: transparent;
+   background: transparent;
+   border-color: transparent;
+}
+.normalfont{
+  font-size: 1.5vw;
+  font-family:Agency FB;
+
+}
+
+
+li{
+  font-size: 2.2vw;
+  height: 2.5vw;
+  padding:0.5vw;
+  padding-top:0.3vw;
+
+}
+li+li { border-left: 4px solid #fff }
+li~li { border-left: 4px solid #fff }
+ul.nav a:hover { color: #14DCEB !important; }
+ul.nav a:active{ color: #14DCEB !important; }
+
+body {
+  background: url(bg.jpg) no-repeat center fixed;
+  background-size: cover;
+}
+
+</style>
+
+<script>
+/*
+   $(function() {
+      $('.nav a').click(function() {
+
+
+      addStyleAttribute($('.nav a'), 'color: gray !important');
+
+      addStyleAttribute($(this), 'color: #14DCEB !important');
+      //   $('.nav a').attr('style', 'color: gray !important');
+     //$(this).attr('style', 'color: #14DCEB !important');
+      });
+   });
+   function addStyleAttribute($element, styleAttribute) {
+       $element.attr('style', $element.attr('style') + '; ' + styleAttribute);
+   }
+*/
+</script>
+<head >
+
+    <div class="row" id="container">
+
+    <span class="leftHeader"> Home  </span>
+    <span class="leftHeader"> Products  </span>
+    <span class="titleHeader"> XYZ Automation</span>
+    <span class="rightHeader"> About Us </span>
+      <span class="rightHeader"> Contact us </span>
+
+
+  </div>
+<p> </p>
+
+   <div class="navbar navbar-default navbar-default" >
+        <div id="TaskMenu">
+                <ul class="nav navbar-nav" style="font-family:Agency FB" >
+                  <!-- class="active" -->
+                   <li><a href="#">Lights</a></li>
+                    <li><a href="#">Temperature</a></li>
+                    <li><a href="#">Security</a></li>
+                      <li><a href="#">Surveillance</a></li>
+					          <li><a href="#">Power Management</a></li>
+					          <li><a href="#">Appliances</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+<style>
+#container {
+    text-align: center;
+}
+a, figure {
+    display: inline-block;
+}
+figcaption {
+    margin: 10px 0 0 0;
+    font-variant: small-caps;
+    font-family: Arial;
+    font-weight: bold;
+    color: #bb3333;
+
+}
+
+
+.item:hover
+{
+    transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+  }
+
+  .item{
+transition :transform 0.2s;
+-webkit-transition: -webkit-transform 0.2s;
+-moz-transition: -moz-transform 0.2s;
+-o-transition: -o-transform 0.2s;
+  }
+
+  .bluehover:hover {
+      color: #14DCEB;
+  }
+
+
+</style>
+
+
+
+</head>
+
+<body >
+
+  
+
+<style>
+ul#nav li.active a { color: #14DCEB ; }
+
+
+</style>
+<div class="container-fluid" style="padding-left:2vw;" id="LightWindow">
+
+<div class="row">
+
+  <div class="col-sm-7 MapWrapper"  style="border:1px solid blue">
+  <div id="MapWrapper" style="border:1px solid green; height:40vw">
+  <img id="Image-Maps-Com-image-maps-2016-05-18-222037" src="images\map.png" border="0" usemap="#image-maps-2016-05-18-222037"  max-width:"100%;"/>
+  <map name="image-maps-2016-05-18-222037" id="ImageMapsCom-image-maps-2016-05-18-222037">
+  <area  alt="" Room="Bedroom" href="#" shape="rect" coords="10,11,339,150" style="outline:none;" target="_self"     />
+  <area  alt="" Room="Living Room" href="#" shape="rect" coords="11,159,340,493" style="outline:none;" target="_self"     />
+  <area  alt="" Room="Storage" href="#" shape="rect" coords="349,237,494,299" style="outline:none;" target="_self"     />
+  <area  alt="" Room="Hallway" href="#" shape="rect" coords="350,10,635,228" style="outline:none;" target="_self"     />
+  <area  alt="" Room="Bathroom" href="#" shape="rect" coords="644,11,839,227" style="outline:none;" target="_self"     />
+  <area shape="rect" coords="846,502,848,504" alt="Image Map" style="outline:none;" title="Image Map" href="#" />
+  <area  alt="" Room="Kitchen" href="#" shape="poly" coords="505,239,505,313,350,314,349,493,836,492,836,238" style="outline:none;" target="_self"     />
+  </map>
+  </div>
+  </div>
+
+
+
+
+
+  <div class="col-sm-5" id="lightWindow">
+    <div>
+      <div class="dashboard">
+          <div class="header">Lights</div>
+
+          <div class="content">
+            <div class="row" id="L1" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
+              <div class="col-sm-2 col-sm-offset-1 normalfont">
+              <span id="Storage">Off</span></div>
+
+              <div class="col-sm-4 white normalfont">Storage </span>
+
+            </div>
+                  <div class="col-sm-5"><span> <input type="range">  </input></div>
+            </div>
+            <div class="row" id="L2" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
+              <div class="col-sm-2 col-sm-offset-1 normalfont" >
+              <span id="Hallway">On</span></div>
+
+              <div class="col-sm-9 white normalfont">Hallway</div>
+            </div>
+
+            <div class="row" id="L2" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
+              <div class="col-sm-2 col-sm-offset-1 normalfont" >
+                <span id="Living Room">
+              Off</span></div>
+
+              <div class="col-sm-9 white normalfont">Living Room</div>
+            </div>
+
+
+            <div class="row" id="L2" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
+              <div class="col-sm-2 col-sm-offset-1 normalfont" >
+              <span id="Bedroom">Off</span></div>
+
+              <div class="col-sm-9 white normalfont">Bedroom</div>
+            </div>
+
+            <div class="row" id="L2" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
+              <div class="col-sm-2 col-sm-offset-1 normalfont" >
+              <span id="Kitchen">On</span></div>
+
+              <div class="col-sm-9 white normalfont">Kitchen </div>
+            </div>
+
+            <div class="row" id="L2" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
+              <div class="col-sm-2 col-sm-offset-1 normalfont" >
+              <span id="Bathroom">On</span></div>
+
+              <div class="col-sm-9 white normalfont">Bathroom</div>
+            </div>
+    </div>
+                 </div>
+
+    </div>
+
+
+
+
+
+
+
+
+</div>
+</div>
+
+
+</body>
+
+
+</html>
