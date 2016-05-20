@@ -3,6 +3,7 @@
 <title>Main Menu</title>
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
  <script src="jquery.imagemapster.min.js"></script>
@@ -469,6 +470,11 @@ ul#nav li.active a { color: #14DCEB ; }
   </map>
   </div>
   </div>
+
+
+
+
+
   <div class="col-sm-5" id="lightWindow">
     <div>
       <div class="dashboard">
@@ -476,36 +482,56 @@ ul#nav li.active a { color: #14DCEB ; }
 
           <div class="content">
             <div class="row" id="L1" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
-              <div class="col-sm-2 col-sm-offset-1 optionselect">
-              <span class="glyphicon glyphicon-star white vcenter" id="RA7ICON" style="padding:0.3vw" ></span></div>
+              <div class="col-sm-2 col-sm-offset-1 normalfont">
+              <span id="Storage">Off</span></div>
 
-              <div class="col-sm-9 white normalfont">Appliances - Oven</div>
+              <div class="col-sm-4 white normalfont">Storage </span>
+
+            </div>
+                  <div class="col-sm-5"><span> <input type="range">  </input></div>
             </div>
             <div class="row" id="L2" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
-              <div class="col-sm-2 col-sm-offset-1">
-              <span class="glyphicon glyphicon-star white" id="RA8ICON" style="padding:0.3vw" ></span></div>
+              <div class="col-sm-2 col-sm-offset-1 normalfont" >
+              <span id="Hallway">On</span></div>
 
-              <div class="col-sm-9 white normalfont">Appliances - TV</div>
+              <div class="col-sm-9 white normalfont">Hallway</div>
             </div>
 
-            <div class="row" id="L3" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
-              <div class="col-sm-2 col-sm-offset-1">
-              <span class="glyphicon glyphicon-lock white" id="RA9ICON" style="padding:0.3vw" ></span></div>
+            <div class="row" id="L2" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
+              <div class="col-sm-2 col-sm-offset-1 normalfont" >
+                <span id="Living Room">
+              Off</span></div>
 
-              <div class="col-sm-9 white normalfont">Security - Front Doors</div>
+              <div class="col-sm-9 white normalfont">Living Room</div>
             </div>
 
 
-            <div class="row" id="L4" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent; border-bottom-color: transparent">
-              <div class="col-sm-2 col-sm-offset-1">
-              <span class="glyphicon glyphicon-home white" id="RA10ICON" style="padding:0.3vw" ></span></div>
+            <div class="row" id="L2" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
+              <div class="col-sm-2 col-sm-offset-1 normalfont" >
+              <span id="Bedroom">Off</span></div>
 
-              <div class="col-sm-9 white normalfont">Temperature - Living Room</div>
+              <div class="col-sm-9 white normalfont">Bedroom</div>
+            </div>
+
+            <div class="row" id="L2" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
+              <div class="col-sm-2 col-sm-offset-1 normalfont" >
+              <span id="Kitchen">On</span></div>
+
+              <div class="col-sm-9 white normalfont">Kitchen </div>
+            </div>
+
+            <div class="row" id="L2" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
+              <div class="col-sm-2 col-sm-offset-1 normalfont" >
+              <span id="Bathroom">On</span></div>
+
+              <div class="col-sm-9 white normalfont">Bathroom</div>
             </div>
     </div>
                  </div>
 
     </div>
+
+
 
 
 
@@ -535,7 +561,6 @@ ul#nav li.active a { color: #14DCEB ; }
 </div>
 </div>
 -->
-
 
 
 </body>

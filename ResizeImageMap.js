@@ -13,6 +13,14 @@ var resizeDelay = 100;    // time to wait before checking the window size again
         fillOpacity: 0.5,
         mapKey: 'Room',
         scaleMap: true,
+        onClick: function(e) {
+          if (e.selected) {
+            document.getElementById(e.key).textContent="On";
+
+          }else{
+            document.getElementById(e.key).textContent="Off";
+          }
+        },
         areas: [
     {
         key: 'Kitchen',
@@ -25,11 +33,12 @@ var resizeDelay = 100;    // time to wait before checking the window size again
     {
       key: 'Bathroom',
       selected:true
-    }
-  ]
+    }  ]
         });
 
     }
+
+
 
 );
 
@@ -88,12 +97,3 @@ function onWindowResize() {
 
 $(window).bind('resize',onWindowResize);
 })
-
-
-
-// Without JQuery
-var slider = new Slider('#ex1', {
-	formatter: function(value) {
-		return 'Current value: ' + value;
-	}
-});
