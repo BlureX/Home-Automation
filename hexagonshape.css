@@ -6,6 +6,7 @@
     border-bottom-right-radius: 5px;
     border: 1px solid gray;
     max-height:19vw;
+     cursor: pointer;
   /*  color: #3385FF; */
   color:#fff;
     /*background: #67A16F;*/
@@ -33,4 +34,9 @@
 .dashboard img {
 width: 100%;
 height: 100%;
+}
+
+
+#ex1Slider .slider-selection {
+	background: #BABABA;
 }

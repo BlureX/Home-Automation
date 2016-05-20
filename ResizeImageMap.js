@@ -9,15 +9,32 @@ var resizeDelay = 100;    // time to wait before checking the window size again
     function()
     {
         $('img').mapster({
-          fillColor: 'ff0000',
-        fillOpacity: 0.3,
-        singleSelect: true,
-        scaleMap: true
+          fillColor: 'FFF269',
+        fillOpacity: 0.5,
+        mapKey: 'Room',
+        scaleMap: true,
+        areas: [
+    {
+        key: 'Kitchen',
+        selected: true
+    },
+    {
+        key: 'Hallway',
+        selected: true
+    },
+    {
+      key: 'Bathroom',
+      selected:true
+    }
+  ]
         });
 
     }
+
 );
 
+
+$( document ).ready( onWindowResize );
 // Resize the map to fit within the boundaries provided
 
 function resize(maxWidth,maxHeight) {
@@ -71,3 +88,12 @@ function onWindowResize() {
 
 $(window).bind('resize',onWindowResize);
 })
+
+
+
+// Without JQuery
+var slider = new Slider('#ex1', {
+	formatter: function(value) {
+		return 'Current value: ' + value;
+	}
+});
