@@ -225,6 +225,22 @@ ul#nav li.active a { color: #14DCEB ; }
   </div>
 
 
+  <script>
+  function changeMode(rid){
+
+     var areaid = $(rid).attr('id');
+        if (document.getElementById(areaid).className == "fa fa-lock"){
+              $('img').mapster('set',false,areaid);
+              document.getElementById(areaid).className = "";
+            document.getElementById(areaid).className = "fa fa-unlock";
+        }else{
+              $('img').mapster('set',true,areaid);
+               document.getElementById(areaid).className = "";
+              document.getElementById(areaid).className = "fa fa-lock";
+        }
+
+  }
+  </script>
 
 
 
@@ -237,14 +253,14 @@ ul#nav li.active a { color: #14DCEB ; }
           <div class="content">
             <div class="row"  style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
               <div class="col-sm-2 col-sm-offset-1 normalfont">
-              <i id="D1" class="fa fa-unlock" ></i></div>
+              <i id="D1" class="fa fa-unlock" onclick="changeMode(this)"></i></div>
 
               <div class="col-sm-8 white normalfont">Front Door </div>
           <div class="col-sm-1 white">  <span class="glyphicon glyphicon-star vcenter" id="RA7ICON" style="padding:0.3vw; padding-right:0.5vw; color:#14DCEB" ></span></div>
             </div>
             <div class="row" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
               <div class="col-sm-2 col-sm-offset-1 normalfont" >
-              <i id="B1" class="fa fa-lock" ></i></div>
+              <i id="B1" class="fa fa-lock" onclick="changeMode(this)"></i></div>
 
               <div class="col-sm-8 white normalfont">Bedroom Window</div>
               <div class="col-sm-1 white">  <span class="glyphicon glyphicon-star white vcenter" id="RA7ICON" style="padding:0.3vw; padding-right:0.5vw" ></span></div>
@@ -252,7 +268,7 @@ ul#nav li.active a { color: #14DCEB ; }
 
             <div class="row"  style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
               <div class="col-sm-2 col-sm-offset-1 normalfont" >
-                <i id="LR1"  class="fa fa-lock" ></i></div>
+                <i id="LR1"  class="fa fa-lock" onclick="changeMode(this)"></i></div>
 
               <div class="col-sm-8 white normalfont">Living Room Window 1</div>
               <div class="col-sm-1 white">  <span class="glyphicon glyphicon-star white vcenter" id="RA7ICON" style="padding:0.3vw; padding-right:0.5vw" ></span></div>
@@ -261,7 +277,7 @@ ul#nav li.active a { color: #14DCEB ; }
 
             <div class="row"  style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
               <div class="col-sm-2 col-sm-offset-1 normalfont" >
-              <i id="LR2" class="fa fa-lock" ></i></div>
+              <i id="LR2" class="fa fa-lock" onclick="changeMode(this)"></i></div>
 
               <div class="col-sm-8 white normalfont">Living Room Window 2</div>
               <div class="col-sm-1 white">  <span class="glyphicon glyphicon-star white vcenter" id="RA7ICON" style="padding:0.3vw; padding-right:0.5vw" ></span></div>
@@ -269,7 +285,7 @@ ul#nav li.active a { color: #14DCEB ; }
 
             <div class="row" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
               <div class="col-sm-2 col-sm-offset-1 normalfont" >
-              <span id="LR3" class="fa fa-unlock" ></span></div>
+              <span id="LR3" class="fa fa-unlock" onclick="changeMode(this)"></span></div>
 
               <div class="col-sm-8 white normalfont">Living Room Window 3 </div>
               <div class="col-sm-1 white">  <span class="glyphicon glyphicon-star white vcenter" id="RA7ICON" style="padding:0.3vw; padding-right:0.5vw" ></span></div>
@@ -277,7 +293,7 @@ ul#nav li.active a { color: #14DCEB ; }
 
             <div class="row" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
               <div class="col-sm-2 col-sm-offset-1 normalfont" >
-              <span id="K1" class="fa fa-lock" ></span></div>
+              <span id="K1" class="fa fa-lock"onclick="changeMode(this)" ></span></div>
 
               <div class="col-sm-8 white normalfont">Kitchen Window 1</div>
               <div class="col-sm-1 white">  <span class="glyphicon glyphicon-star white vcenter" id="RA7ICON" style="padding:0.3vw; padding-right:0.5vw" ></span></div>
@@ -285,7 +301,7 @@ ul#nav li.active a { color: #14DCEB ; }
 
             <div class="row"  style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
               <div class="col-sm-2 col-sm-offset-1 normalfont" >
-              <span id="K2" class="fa fa-lock" ></span></div>
+              <span id="K2" class="fa fa-lock" onclick="changeMode(this)"></span></div>
 
               <div class="col-sm-8 white normalfont">Kitchen Window 2</div>
               <div class="col-sm-1 white">  <span class="glyphicon glyphicon-star white vcenter" id="RA7ICON" style="padding:0.3vw; padding-right:0.5vw" ></span></div>
@@ -293,7 +309,7 @@ ul#nav li.active a { color: #14DCEB ; }
 
             <div class="row" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
               <div class="col-sm-2 col-sm-offset-1 normalfont" >
-              <span id="K3" class="fa fa-lock" ></span></div>
+              <span id="K3" class="fa fa-lock" onclick="changeMode(this)"></span></div>
 
               <div class="col-sm-8 white normalfont">Kitchen Window 3</div>
               <div class="col-sm-1 white">  <span class="glyphicon glyphicon-star white vcenter" id="RA7ICON" style="padding:0.3vw; padding-right:0.5vw" ></span></div>
@@ -301,7 +317,7 @@ ul#nav li.active a { color: #14DCEB ; }
 
             <div class="row"  style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent; border-bottom-color: transparent">
               <div class="col-sm-2 col-sm-offset-1 normalfont" >
-              <span id="K4" class="fa fa-unlock" ></span></div>
+              <span id="K4" class="fa fa-unlock" onclick="changeMode(this)"></span></div>
 
               <div class="col-sm-8 white normalfont">Kitchen Window 4</div>
               <div class="col-sm-1 white">  <span class="glyphicon glyphicon-star white vcenter" id="RA7ICON" style="padding:0.3vw; padding-right:0.5vw" ></span></div>

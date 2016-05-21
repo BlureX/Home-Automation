@@ -243,7 +243,23 @@ ul#nav li.active a { color: #14DCEB ; }
   }
   </style>
 
+<script>
+function changeMode(rid){
 
+   var areaid = $(rid).attr('id');
+   console.log(areaid);
+      if (document.getElementById(areaid).textContent=="Off"){
+            $('img').mapster('set',true,areaid);
+            document.getElementById(areaid).textContent="On";
+      }else{
+            $('img').mapster('set',false,areaid);
+            document.getElementById(areaid).textContent="Off";
+      }
+
+      console.log("GG");
+}
+
+</script>
 
   <div class="col-sm-5" id="lightWindow">
     <div>
@@ -253,7 +269,7 @@ ul#nav li.active a { color: #14DCEB ; }
           <div class="content">
             <div class="row" id="L1" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
               <div class="col-sm-2 col-sm-offset-1 normalfont">
-              <span id="Storage">Off</span></div>
+              <span id="Storage" onclick="changeMode(this)">Off</span></div>
 
               <div class="col-sm-8 white normalfont">Storage
 
@@ -262,7 +278,7 @@ ul#nav li.active a { color: #14DCEB ; }
             </div>
             <div class="row" id="L2" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
               <div class="col-sm-2 col-sm-offset-1 normalfont" >
-              <span id="Hallway">On</span></div>
+              <span id="Hallway" onclick="changeMode(this)">On</span></div>
 
               <div class="col-sm-8 white normalfont">Hallway</div>
               <div class="col-sm-1 white">  <span class="glyphicon glyphicon-star white vcenter" id="RA7ICON" style="padding:0.3vw; padding-right:0.5vw" ></span></div>
@@ -270,7 +286,7 @@ ul#nav li.active a { color: #14DCEB ; }
 
             <div class="row" id="L2" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
               <div class="col-sm-2 col-sm-offset-1 normalfont" >
-                <span id="Living Room">
+                <span id="Living Room" onclick="changeMode(this)">
               Off</span></div>
 
               <div class="col-sm-8 white normalfont">Living Room</div>
@@ -280,7 +296,7 @@ ul#nav li.active a { color: #14DCEB ; }
 
             <div class="row" id="L2" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
               <div class="col-sm-2 col-sm-offset-1 normalfont" >
-              <span id="Bedroom">Off</span></div>
+              <span id="Bedroom" onclick="changeMode(this)">Off</span></div>
 
               <div class="col-sm-8 white normalfont">Bedroom</div>
                 <div class="col-sm-1 white">  <span class="glyphicon glyphicon-star white vcenter" id="RA7ICON" style="padding:0.3vw; padding-right:0.5vw" ></span></div>
@@ -288,7 +304,7 @@ ul#nav li.active a { color: #14DCEB ; }
 
             <div class="row" id="L2" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
               <div class="col-sm-2 col-sm-offset-1 normalfont" >
-              <span id="Kitchen">On</span></div>
+              <span id="Kitchen" onclick="changeMode(this)">On</span></div>
 
               <div class="col-sm-8 white normalfont">Kitchen </div>
 
@@ -297,7 +313,7 @@ ul#nav li.active a { color: #14DCEB ; }
 
             <div class="row" id="L2" style="padding:0.1vw; border-style: solid;  border-width: 5px; border-top-color: transparent">
               <div class="col-sm-2 col-sm-offset-1 normalfont" >
-              <span id="Bathroom">On</span></div>
+              <span id="Bathroom" onclick="changeMode(this)">On</span></div>
 
               <div class="col-sm-8 white normalfont">Bathroom</div>
                 <div class="col-sm-1 white">  <span class="glyphicon glyphicon-star white vcenter" id="RA7ICON" style="padding:0.3vw; padding-right:0.5vw" ></span></div>
